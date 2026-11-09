@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.header-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fdfbf7;;
+  border-bottom: 1px solid #eaeaea;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+}
+.logo-texto {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: center; 
+}
+.logo-texto h1, 
+.logo-texto p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+.logo-texto h1 {
+  font-size: 18px;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.logo-texto p {
+  font-size: 10px;
+  color: #718096;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4a5568;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: #2b6cb0;
+}
+
+@media (max-width: 768px) {
+  .header-principal {
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 16px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+}
+
+
+.hero-section {
+    background-color: #1a2238; 
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px 90px 80px;
+    gap: 40px;
+    position: relative;
+    overflow: visible;
+}
+
+.hero-conteudo {
+    max-width: 600px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    letter-spacing: 1px;
+}
+
+.hero-conteudo h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.destaque-amarelo {
+    color: #f6ad55; 
+}
+
+.hero-descricao {
+    font-size: 16px;
+    color: #cbd5e0;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+.btn-amarelo {
+    background-color: #f6ad55;
+    color: #1a2238;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn-amarelo:hover {
+    background-color: #ed8936;
+}
+
+.btn-transparente {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-transparente:hover {
+    background-color: #ffffff0d;
+}
+
+.hero-beneficios {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: #cbd5e0;
+    letter-spacing: 1px;
+}
+
+.hero-imagem-container {
+    position: relative;
+    max-width: 500px;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card-flutuante {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background-color: #ffffff;
+    color: #1a2238;
+    padding: 16px 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.card-icone {
+    background-color: #fad644;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+.card-texto strong {
+    font-size: 14px;
+    display: block;
+}
+
+.card-texto p {
+    font-size: 12px;
+    color: #4a5568;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 36px;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .hero-beneficios {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .card-flutuante {
+        left: 10px;
+        bottom: -15px;
+    }
+}
