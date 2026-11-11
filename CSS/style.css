@@ -2,7 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #fdfbf7; 
 }
 .header-principal {
   display: flex;
@@ -11,6 +16,10 @@
   padding: 20px 40px;
   background-color: #fdfbf7;;
   border-bottom: 1px solid #eaeaea;
+  
+  position: sticky; 
+  top: 0;          
+  z-index: 1000;
 }
 .logo-container {
   display: flex;
@@ -67,8 +76,8 @@
 @media (max-width: 768px) {
   .header-principal {
     flex-direction: column;
-    padding: 16px 20px;
-    gap: 16px;
+    padding: 10px 16px;
+    gap: 8px;
   }
 
   .logo-container {
@@ -228,7 +237,7 @@
 @media (max-width: 900px) {
     .hero-section {
         flex-direction: column;
-        padding: 40px 20px;
+        padding: 20px 20px;
         text-align: center;
     }
 
@@ -250,5 +259,168 @@
     .card-flutuante {
         left: 10px;
         bottom: -15px;
+    }
+    .container-diferenciais {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .diferenciais-text h2 {
+        font-size: 2.5rem;
+    }
+}
+.diferenciais-section {
+    background-color: #F4F1EA; 
+    color: #2D3748;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.container-diferenciais {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.diferenciais-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.diferenciais-text .subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #4A5568;
+    text-transform: uppercase;
+}
+
+.diferenciais-text h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #1A202C;
+    line-height: 1.15;
+}
+
+.diferenciais-text .description {
+    font-size: 1.05rem;
+    color: #4A5568;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-width: 420px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #F7FAFC;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.card-content h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2D3748;
+    margin-bottom: 6px;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    color: #718096;
+    line-height: 1.5;
+}
+@media (max-width: 500px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .container-diferenciais {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .diferenciais-text {
+        text-align: center; 
+        align-items: center;
+    }
+    
+    .diferenciais-text h2 {
+        font-size: 2.5rem;
+    }
+    .card{
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .diferenciais-section {
+        padding: 50px 20px;
+    }
+
+    .diferenciais-text h2 {
+        font-size: 2rem; 
+        line-height: 1.2;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; 
+        gap: 16px;
+    }
+    .card{
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+}
+
+
+.header-principal .logo-container {
+    max-height: 100px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+.header-principal.rolando .logo-container {
+    max-height: 0;
+    opacity:0;
+}
+
+@media (max-width: 768px) {
+    .header-principal.rolando {
+        padding: 10px 16px;
     }
 }
