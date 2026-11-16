@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquistas</title>
+    <title>Nossas Conquistas | Centro de Educação Adelino Ferreira Borba</title>
+    <link rel="shortcut icon" href="../img/logo_nav_certo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/conquistas.css">
+</head>
+
+<body>
+
+    <body id="inicio">
+        <header class="header-principal">
+
+            <div class="logo-container">
+                <img src="../img/logo_nav_certo.png" alt="Logo Adelino Borba" class="logo-img">
+                <div class="logo-texto">
+                    <h1>Adelino Ferreira Borba</h1>
+                    <p>CENTRO DE EDUCAÇÃO</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#eja">EJA</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#conquistas">Conquistas</a></li>
+                    <li><a href="#formatura">Formatura</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <main class="pagina-conquistas">
+            <section class="hero-conquistas">
+                <div class="conquistas-container">
+
+                    <!-- Link de retorno para a página principal -->
+                    <a href="../index.html" class="btn-voltar">
+                        <span aria-hidden="true">&larr;</span> Voltar para a página inicial
+                    </a>
+
+                    <!-- Tag com ícone de troféu -->
+                    <div class="tag-conquistas">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                            <path d="M4 22h16"></path>
+                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                        </svg>
+                        <span>NOSSAS CONQUISTAS</span>
+                    </div>
+
+                    <!-- Conteúdo dividido: Título gigante à esquerda + Texto com barra dourada à direita -->
+                    <div class="hero-conquistas-grid">
+                        <h1>
+                            Quando a escola acredita, o talento <span>ganha o mundo.</span>
+                        </h1>
+
+                        <p class="hero-conquistas-texto">
+                            Do cinema à pesquisa científica, estudantes e educadores do Adelino Borba transformam
+                            curiosidade, memória e trabalho coletivo em reconhecimento dentro e fora de Alvorada.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Faixa Amarela de Destaques / Métricas -->
+            <section class="faixa-metricas">
+                <div class="conquistas-container">
+                    <div class="card-metricas">
+
+                        <!-- Bloco 01 -->
+                        <div class="metrica-item">
+                            <span class="metrica-indice">01</span>
+                            <strong class="metrica-numero">1º</strong>
+                            <h3>Melhor filme</h3>
+                            <p>em mostra nacional</p>
+                        </div>
+
+                        <!-- Bloco 02 -->
+                        <div class="metrica-item">
+                            <span class="metrica-indice">02</span>
+                            <strong class="metrica-numero">3</strong>
+                            <h3>Projetos científicos</h3>
+                            <p>em eventos da UFRGS</p>
+                        </div>
+
+                        <!-- Bloco 03 -->
+                        <div class="metrica-item">
+                            <span class="metrica-indice">03</span>
+                            <strong class="metrica-numero">2+</strong>
+                            <h3>Projetos em vídeo</h3>
+                            <p>e espaço para muitos outros</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galeria de Conquistas (Carrossel com Miniaturas) -->
+            <section class="galeria-conquistas">
+                <div class="conquistas-container">
+
+                    <!-- Cabeçalho da Secção -->
+                    <div class="galeria-header">
+                        <div class="galeria-header-esq">
+                            <span class="subtitulo-galeria">GALERIA DE CONQUISTAS</span>
+                            <h2>Momentos que merecem ser vistos.</h2>
+                        </div>
+                        <p class="galeria-header-dir">
+                            Produções da escola e imagens que representam a criatividade, a pesquisa e o trabalho
+                            coletivo por trás de cada conquista.
+                        </p>
+                    </div>
+
+                    <!-- Visor Principal do Carrossel -->
+                    <div class="galeria-visor" id="galeriaConquistas">
+
+                        <!-- Contador (01 / 05) no canto superior esquerdo -->
+                        <div class="galeria-contador" id="galeriaContador">01 / 05</div>
+
+                        <!-- Controlos (Pausa, Anterior, Próximo) no canto superior direito -->
+                        <div class="galeria-controles">
+                            <button type="button" class="btn-galeria btn-pausa" id="btnPausaGaleria"
+                                aria-label="Pausar ou retomar apresentação" title="Pausar/Retomar">
+                                ||
+                            </button>
+                            <button type="button" class="btn-galeria btn-ant-galeria" id="btnAntGaleria"
+                                aria-label="Imagem anterior">
+                                &larr;
+                            </button>
+                            <button type="button" class="btn-galeria btn-prox-galeria" id="btnProxGaleria"
+                                aria-label="Próxima imagem">
+                                &rarr;
+                            </button>
+                        </div>
+
+                        <!-- Slides (5 itens correspondentes às 5 miniaturas) -->
+                        <div class="galeria-slides">
+
+                            <!-- Slide 1 -->
+                            <div class="galeria-slide ativo">
+                                <img src="../img/capa-curta-derrepente-15.png" alt="Curta premiado De Repente 15">
+                                <div class="galeria-info">
+                                    <span class="badge-amarelo">CURTA PREMIADO</span>
+                                    <h3>De Repente 15</h3>
+                                    <p>O curta produzido por estudantes que conquistou o prémio de Melhor Filme em
+                                        mostra nacional.</p>
+                                    <small>Imagem da produção</small>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="galeria-slide">
+                                <img src="../img/curta-trajetorias.png" alt="Projeto Trajetórias">
+                                <div class="galeria-info">
+                                    <span class="badge-amarelo">AUDIOVISUAL</span>
+                                    <h3>Trajetórias</h3>
+                                    <p>Registo em vídeo das histórias de superação e aprendizagem da comunidade escolar.
+                                    </p>
+                                    <small>Produção estudantil</small>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="galeria-slide">
+                                <img src="../img/bastidores-adelino-certo.png" alt="Bastidores de gravação">
+                                <div class="galeria-info">
+                                    <span class="badge-amarelo">CINEMA NA ESCOLA</span>
+                                    <h3>Bastidores e criação</h3>
+                                    <p>Trabalho coletivo entre estudantes e educadores na captação e edição de som e
+                                        imagem.</p>
+                                    <small>Acervo da escola</small>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="galeria-slide">
+                                <img src="../img/premio-ufrgs.png" alt="Pesquisa científica na UFRGS"
+                                    style="object-position: center 10%;">
+                                <div class="galeria-info">
+                                    <span class="badge-amarelo">INICIAÇÃO CIENTÍFICA</span>
+                                    <h3>Projetos na UFRGS</h3>
+                                    <p>Investigações desenvolvidas na escola e apresentadas em mostras científicas
+                                        universitárias.</p>
+                                    <small>Mostra científica</small>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5 -->
+                            <div class="galeria-slide">
+                                <img src="../img/conquista-coletiva.jpeg" alt="Celebração da turma"
+                                    style="object-position: center 65%;">
+                                <div class="galeria-info">
+                                    <span class="badge-amarelo">COMUNIDADE</span>
+                                    <h3>Conquista coletiva</h3>
+                                    <p>O reconhecimento dentro e fora de Alvorada como reflexo do compromisso com a
+                                        educação.</p>
+                                    <small>Registo institucional</small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Barra de Miniaturas (Thumbnails) -->
+                    <div class="galeria-miniaturas" id="galeriaMiniaturas">
+                        <button type="button" class="miniatura ativo" data-indice="0" aria-label="Ver imagem 1">
+                            <img src="../img/capa-curta-derrepente-15.png" alt="Miniatura 1">
+                        </button>
+                        <button type="button" class="miniatura" data-indice="1" aria-label="Ver imagem 2">
+                            <img src="../img/curta-trajetorias.png" alt="Miniatura 2">
+                        </button>
+                        <button type="button" class="miniatura" data-indice="2" aria-label="Ver imagem 3">
+                            <img src="../img/bastidores-adelino-certo.png" alt="Miniatura 3">
+                        </button>
+                        <button type="button" class="miniatura" data-indice="3" aria-label="Ver imagem 4">
+                            <img src="../img/premio-ufrgs.png" alt="Miniatura 4" style="object-position: center 10%">
+                        </button>
+                        <button type="button" class="miniatura" data-indice="4" aria-label="Ver imagem 5">
+                            <img src="../img/conquista-coletiva.jpeg" alt="Miniatura 5"
+                                style="object-position: center 65%;">
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Seção Destaques: Talento reconhecido -->
+            <section class="secao-destaques">
+                <div class="conquistas-container">
+
+                    <!-- Cabeçalho da Seção -->
+                    <div class="destaques-header">
+                        <div class="destaques-header-esq">
+                            <span class="subtitulo-destaques">DESTAQUES</span>
+                            <h2>Talento reconhecido.</h2>
+                        </div>
+                        <p class="destaques-header-dir">
+                            Do cinema à ciência, projetos que começaram na escola chegaram a novos espaços e
+                            conquistaram reconhecimento.
+                        </p>
+                    </div>
+
+                    <!-- Grade de 3 Cards Coloridos -->
+                    <div class="destaques-grid">
+
+                        <!-- Card 1: Amarelo -->
+                        <article class="card-destaque card-amarelo">
+                            <div class="card-destaque-topo">
+                                <span class="card-categoria">CINEMA ESTUDANTIL</span>
+                                <span class="card-icone-circulo" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z">
+                                        </path>
+                                        <circle cx="12" cy="13" r="3"></circle>
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <strong class="card-numero-grande">2025</strong>
+                            <h3>Melhor Filme em mostra nacional</h3>
+                            <p>
+                                O curta “De Repente 15”, realizado por estudantes do Adelino Borba, venceu a Mostra
+                                Competitiva Nacional da 10ª edição do Festival Internacional de Cinema Estudantil de
+                                Barra do Piraí, no Rio de Janeiro.
+                            </p>
+
+                            <a href="https://oalvoradense.com.br/de-repente-15-conquista-premio-internacional-no-rj/"
+                                target="_blank" rel="noopener noreferrer" class="card-fonte-link">
+                                <span>O Alvoradense</span>
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </article>
+
+                        <!-- Card 2: Azul-Marinho -->
+                        <article class="card-destaque card-azul">
+                            <div class="card-destaque-topo">
+                                <span class="card-categoria">PESQUISA E CIÊNCIA</span>
+                                <span class="card-icone-circulo" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <strong class="card-numero-grande">UFRGS</strong>
+                            <h3>Trabalho premiado na UFRGS Jovem</h3>
+                            <p>
+                                A pesquisa “A influência dos meios de transporte utilizados em Alvorada no aquecimento
+                                global” aparece entre os trabalhos premiados da educação básica pela UFRGS Jovem.
+                            </p>
+
+                            <a href="https://www.alvorada.rs.gov.br/estudantes-da-rede-municipal-de-alvorada-sao-premiadas-na-21a-edicao-de-salao-cientifico-da-ufrgs/"
+                                target="_blank" rel="noopener noreferrer" class="card-fonte-link">
+                                <span>Universidade Federal do Rio Grande do Sul</span>
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </article>
+
+                        <!-- Card 3: Terracota -->
+                        <article class="card-destaque card-terracota">
+                            <div class="card-destaque-topo">
+                                <span class="card-categoria">PROTAGONISMO CIENTÍFICO</span>
+                                <span class="card-icone-circulo" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <strong class="card-numero-grande">3&times;</strong>
+                            <h3>Três trabalhos em eventos da UFRGS</h3>
+                            <p>
+                                Projetos desenvolvidos no Centro de Educação foram aprovados para eventos científicos da
+                                universidade, levando perguntas e ideias nascidas em Alvorada para o ambiente acadêmico.
+                            </p>
+
+                            <a href="https://www.alvorada.rs.gov.br/centro-de-educacao-municipal-adelino-ferreira-borba-tem-tres-trabalhos-aprovados-para-eventos-cientificos-da-ufrgs/"
+                                target="_blank" rel="noopener noreferrer" class="card-fonte-link">
+                                <span>Prefeitura de Alvorada</span>
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </article>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Seção Mural: Sempre em movimento -->
+            <section class="secao-movimento">
+                <div class="conquistas-container">
+
+                    <!-- Cabeçalho da Seção -->
+                    <div class="movimento-header">
+                        <div class="movimento-header-esq">
+                            <span class="subtitulo-movimento">AGORA NA ESCOLA</span>
+                            <h2>Sempre em movimento.</h2>
+                        </div>
+                        <p class="movimento-header-dir">
+                            Um mural simples para acompanhar projetos, novidades e momentos importantes da comunidade
+                            escolar.
+                        </p>
+                    </div>
+
+                    <!-- Grade Assimétrica (Vitrine de Vídeos à esquerda + 2 Cards empilhados à direita) -->
+                    <div class="movimento-grid">
+
+                        <!-- Coluna Esquerda: Card Amarelo com Carrossel de Vídeos -->
+                        <div class="card-movimento-videos">
+
+                            <!-- Barra Superior do Card Amarelo -->
+                            <div class="videos-topo">
+                                <div class="videos-badge">
+                                    <span class="icone-video-mini" aria-hidden="true">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </span>
+                                    <span>REGISTROS EM VÍDEO</span>
+                                </div>
+
+                                <div class="videos-nav">
+                                    <span class="videos-contador" id="contadorVideosMural">01 / 03</span>
+                                    <button type="button" class="btn-video-mural" id="btnAntVideoMural"
+                                        aria-label="Vídeo anterior">&larr;</button>
+                                    <button type="button" class="btn-video-mural" id="btnProxVideoMural"
+                                        aria-label="Próximo vídeo">&rarr;</button>
+                                </div>
+                            </div>
+
+                            <!-- Lista de Vídeos (Cada item tem seu vídeo e sua legenda abaixo) -->
+                            <div class="videos-lista" id="listaVideosMural">
+
+                                <!-- Vídeo 1 -->
+                                <div class="video-mural-item ativo">
+                                    <div class="video-frame">
+                                        <video src="../video-guaiba.mp4" controls preload="metadata">
+                                            Seu navegador não suporta vídeos.
+                                        </video>
+                                    </div>
+                                    <div class="video-legenda">
+                                        <span class="video-data">MAIO DE 2026 &bull; FESTIVAL DE GUAÍBA</span>
+                                        <h3>Projeto Destaque no Festival de Cinema</h3>
+                                        <!-- arrumar as legendas -->
+                                        <p>Com 5 filmes selecionados para a mostra competitiva e coordenação do prof.
+                                            Adailton Moreira, o Projeto Primeira Tela conquistou o prêmio Projeto
+                                            Destaque representando a educação pública de Alvorada.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Vídeo 2 -->
+                                <div class="video-mural-item">
+                                    <div class="video-frame">
+                                        <video src="../video-adelino.mp4" controls preload="metadata">
+                                            Seu navegador não suporta vídeos.
+                                        </video>
+                                    </div>
+                                    <div class="video-legenda">
+                                        <span class="video-data">PROJETO PRIMEIRA TELA &bull; AUDIOVISUAL</span>
+                                        <h3>Alvorada é referência no cinema estudantil</h3>
+                                        <p>Desenvolvido no Adelino Borba, o projeto transforma a sala de aula em espaço
+                                            de criação — revelando talentos que brilharam no Festival Internacional de
+                                            Cinema Estudantil de Guaíba.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Vídeo 3 -->
+                                <div class="video-mural-item">
+                                    <div class="video-frame">
+                                        <video src="../video-mostra.mp4" controls preload="metadata">
+                                            Seu navegador não suporta vídeos.
+                                        </video>
+                                    </div>
+                                    <div class="video-legenda">
+                                        <span class="video-data">PROJETOS &bull; VIVÊNCIAS</span>
+                                        <h3>Mostras, oficinas e atividades coletivas</h3>
+                                        <p>Momentos que aproximam a sala de aula da realidade e da criatividade de
+                                            Alvorada.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Coluna Direita: 2 Cards Escuros Empilhados -->
+                        <div class="movimento-coluna-direita">
+
+                            <!-- Card Direito Superior -->
+                            <article class="card-movimento-escuro">
+                                <div class="card-escuro-topo">
+                                    <span class="card-escuro-icone" aria-hidden="true">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z">
+                                            </path>
+                                            <circle cx="12" cy="13" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="card-escuro-status">ATUALIZAÇÃO CONTÍNUA</span>
+                                </div>
+
+                                <span class="card-escuro-tag">AUDIOVISUAL</span>
+                                <h3>Curtas e documentários ganham uma nova vitrine</h3>
+                                <p>
+                                    As produções realizadas na escola podem ser encontradas em um só lugar, facilitando
+                                    o acesso de estudantes, famílias e de toda a comunidade.
+                                </p>
+                            </article>
+
+                            <!-- Card Direito Inferior -->
+                            <article class="card-movimento-escuro">
+                                <div class="card-escuro-topo">
+                                    <span class="card-escuro-icone" aria-hidden="true">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span class="card-escuro-status">EM MOVIMENTO</span>
+                                </div>
+
+                                <span class="card-escuro-tag">PROJETOS</span>
+                                <h3>Pesquisa e criatividade atravessam os muros da escola</h3>
+                                <p>
+                                    A participação em mostras, festivais e eventos científicos amplia a troca de
+                                    experiências e aproxima os trabalhos dos estudantes de novos públicos.
+                                </p>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </main>]
+        <!-- Rodapé Institucional -->
+        <footer class="rodape-conquistas">
+            <div class="conquistas-container">
+                <div class="rodape-conteudo">
+
+                    <!-- Lado Esquerdo: Brasão + Nome da Escola + Slogan -->
+                    <div class="rodape-marca">
+                        <div class="rodape-logo-linha">
+                            <img src="../img/logo_nav_certo.png" alt="Brasão Centro de Educação Adelino Ferreira Borba">
+                            <div class="rodape-titulos">
+                                <strong>Adelino Ferreira Borba</strong>
+                                <span>CENTRO DE EDUCAÇÃO</span>
+                            </div>
+                        </div>
+                        <p>Educação, criatividade e protagonismo em Alvorada–RS.</p>
+                    </div>
+
+                    <!-- Lado Direito: Links de Navegação -->
+                    <nav class="rodape-links" aria-label="Navegação do rodapé">
+                        <a href="../index.html">Página inicial</a>
+                        <a href="../index.html#cursos">Cursos</a>
+                        <a href="../index.html#contato">Contato</a>
+                    </nav>
+
+                </div>
+            </div>
+        </footer>
+        <script src="../JS/conquistas.js"></script>
+    </body>
+
+</html>

@@ -17,7 +17,7 @@ body {
   background-color: #fdfbf7;;
   border-bottom: 1px solid #eaeaea;
   
-  position: sticky; 
+  position: relative; 
   top: 0;          
   z-index: 1000;
 }
@@ -576,4 +576,810 @@ body {
 
 .eja-cta-button:hover {
     background-color: #0f172a;
+}
+
+/* --- SEÇÃO CONHEÇA A ESCOLA --- */
+.secao-conheca {
+  background-color: #ffffff;
+  padding: 76px 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.conheca-container {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho Superior */
+.conheca-header {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.subtitulo-secao {
+  display: block;
+  color: #5b6b8c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.conheca-header h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #141e36;
+  font-size: clamp(1.85rem, 3.5vw, 2.55rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.conheca-header p {
+  color: #5a657d;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+/* --- CARTÃO PRINCIPAL DIVIDIDO --- */
+/* 1. Trava a divisão exata das colunas (minmax(0, ...) impede o vídeo de empurrar o texto) */
+.card-direcao {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  background-color: #192444;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 22px 45px rgba(20, 30, 54, 0.16);
+}
+
+/* 2. Faz o contêiner do vídeo preencher 100% da altura do cartão, sem sobrar faixa azul embaixo */
+.direcao-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 290px;
+  overflow: hidden;
+  background-color: #0d1324;
+}
+
+/* 3. Obriga o vídeo a respeitar a largura e altura da coluna dele */
+.direcao-video video {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-play-mock {
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-play-mock svg {
+  margin-left: 3px; /* Centraliza opticamente o triângulo de play */
+}
+
+.btn-play-mock:hover {
+  transform: scale(1.08);
+}
+
+.video-overlay h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  max-width: 260px;
+}
+
+.video-overlay p {
+  color: #d6deed;
+  font-size: 0.84rem;
+}
+
+.video-overlay.escondido {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Lado Direito: Conteúdo Azul-Marinho */
+.direcao-conteudo {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tag-amarela {
+  color: #f5c249;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.direcao-conteudo h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.direcao-descricao {
+  color: #b8c2d8;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Lista de Tópicos */
+.lista-topicos {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.lista-topicos li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.lista-topicos li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icone-topico {
+  color: #f5c249;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Caixa de aviso sutil na base */
+.aviso-video {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: #9ba8c2;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+/* --- RESPONSIVIDADE (Tablet e Celular) --- */
+@media (max-width: 860px) {
+  .card-direcao {
+    grid-template-columns: 1fr;
+  }
+
+  .direcao-video {
+    min-height: 300px;
+  }
+
+  .direcao-conteudo {
+    padding: 36px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .secao-conheca {
+    padding: 52px 16px;
+  }
+
+  .direcao-video {
+    min-height: 250px;
+  }
+
+  .direcao-conteudo {
+    padding: 28px 20px;
+  }
+}
+
+/* Fundo azul-marinho externo */
+.secao-conquistas {
+  background-color: #192444;
+  padding: 64px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cartão principal */
+.card-conquistas {
+  width: 100%;
+  max-width: 1050px;
+  background-color: #212d4f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card-conquistas:hover {
+  transform: scale(1.02); /* 1.02 aumenta 2% — fica elegante sem exagerar */
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.38);
+}
+
+/* --- COLUNA ESQUERDA --- */
+.conquistas-conteudo {
+  padding: 85px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tag-superior {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f5c249;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.conquistas-conteudo h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  /* clamp ajusta o tamanho da fonte suavemente conforme a tela */
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.conquistas-conteudo p {
+  color: #b8c2d8;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 420px;
+}
+
+.btn-conquistas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f5c249;
+  color: #192444;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-conquistas:hover {
+  background-color: #ffd063;
+  transform: translateY(-2px);
+}
+
+/* --- COLUNA DIREITA (CONTROLE DE TAMANHO DA IMAGEM) --- */
+.conquistas-midia {
+  position: relative;
+  width: 100%;
+  /* Trava a altura no desktop para a foto não ficar gigante */
+  height: 500px;
+  overflow: hidden;
+}
+
+.conquistas-midia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Foca no centro-topo para não cortar cabeças/rostos */
+  object-position: center 25%;
+  filter: grayscale(100%);
+  display: block;
+}
+
+.conquistas-midia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(16, 23, 44, 0.9) 0%,
+    rgba(16, 23, 44, 0.25) 45%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.midia-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.badge-premio {
+  background-color: #f5c249;
+  color: #192444;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.midia-overlay h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+}
+
+/* --- RESPONSIVIDADE: TABLETS (até 900px) --- */
+@media (max-width: 900px) {
+  .card-conquistas {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .conquistas-conteudo {
+    padding: 36px 32px;
+  }
+
+  /* No tablet, a foto fica embaixo com altura controlada */
+  .conquistas-midia {
+    height: 320px;
+  }
+}
+
+/* --- RESPONSIVIDADE: CELULARES (até 480px) --- */
+@media (max-width: 480px) {
+  .secao-conquistas {
+    padding: 40px 16px;
+  }
+
+  .card-conquistas {
+    border-radius: 16px;
+  }
+
+  .conquistas-conteudo {
+    padding: 28px 22px;
+  }
+
+  .btn-conquistas {
+    width: 100%; /* Botão ocupa a largura toda no celular para facilitar o toque */
+    padding: 14px 20px;
+    font-size: 0.88rem;
+  }
+
+  .conquistas-midia {
+    height: 240px; /* Imagem mais compacta no celular */
+  }
+
+  .midia-overlay {
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+  }
+}
+
+/* --- RODAPÉ COMPACTO --- */
+.rodape {
+  background-color: #11192e;
+  color: #a3b1cc;
+  font-family: 'Inter', sans-serif;
+  padding-top: 38px; /* Reduzido de 64px para 38px */
+}
+
+.rodape-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px 32px 24px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.65fr 1.35fr;
+  gap: 32px;
+}
+/* Coluna 1: Marca */
+.marca-topo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px; /* Reduzido de 20px */
+}
+
+.rodape-logo {
+  width: 40px; /* Logo levemente menor (era 48px) */
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.marca-texto strong {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.marca-texto span {
+  color: #8f9db8;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.marca-descricao {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #9ba8c2;
+  max-width: 300px;
+}
+
+/* Títulos das Colunas */
+.rodape-coluna h4 {
+  color: #f5c249;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px; /* Reduzido de 20px */
+}
+
+/* Lista de Links (NAVEGUE) mais próxima */
+.rodape-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Reduzido de 14px para deixar a lista bem mais curta */
+}
+
+.rodape-links a {
+  color: #b4c0d8;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.rodape-links a:hover {
+  color: #f5c249;
+  transform: translateX(3px);
+}
+
+/* Coluna 3: Contato e Ações */
+.contato-texto {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #9ba8c2;
+  margin-bottom: 14px; /* Reduzido de 22px */
+  max-width: 320px;
+}
+
+.rodape-acoes {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 10px 28px; /* 10px entre as linhas, 28px entre as duas colunas */
+}
+
+.rodape-acoes a {
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.rodape-acoes a span {
+  transition: transform 0.2s ease;
+}
+
+.rodape-acoes a:hover {
+  color: #f5c249;
+}
+
+.rodape-acoes a:hover span {
+  transform: translateX(4px);
+}
+
+/* Barra Inferior (Copyright) */
+.rodape-inferior {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 0; /* Reduzido de 24px */
+}
+
+.rodape-inferior-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: #6c7a96;
+}
+
+/* --- SEÇÃO FORMATURA --- */
+.secao-formatura {
+  background-color: #eef1f6; /* Fundo cinza-azulado bem claro da referência */
+  padding: 72px 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.formatura-container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho dividido em 2 colunas */
+.formatura-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.header-esquerda {
+  max-width: 520px;
+}
+
+.subtitulo-secao {
+  display: block;
+  color: #5b6b8c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header-esquerda h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #141e36;
+  font-size: clamp(1.85rem, 3.5vw, 2.55rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.header-direita {
+  color: #5a657d;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  max-width: 390px;
+  padding-bottom: 4px;
+}
+
+/* --- MOLDURA DO CARROSSEL --- */
+.carrossel-formatura {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(20, 30, 54, 0.15);
+  background-color: #141e36;
+}
+
+/* Botões de seta no canto superior direito */
+.carrossel-controles {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-seta {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-anterior {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #141e36;
+}
+
+.btn-proximo {
+  background-color: #f5c249;
+  color: #141e36;
+}
+
+.btn-seta:hover {
+  transform: scale(1.08);
+}
+
+/* Slides */
+.carrossel-slides,
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+/* Como estamos sem JS por enquanto, esconde os slides que não têm a classe .ativo */
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide.ativo {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Degradê escuro na base da foto para destacar o texto branco */
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 19, 36, 0.92) 0%,
+    rgba(13, 19, 36, 0.45) 45%,
+    rgba(13, 19, 36, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+/* Textos no canto inferior esquerdo */
+.slide-conteudo {
+  position: absolute;
+  bottom: 36px;
+  left: 36px;
+  right: 120px; /* Deixa espaço para os pontinhos na direita */
+  z-index: 5;
+}
+
+.slide-tag {
+  display: block;
+  color: #f5c249;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.slide-conteudo h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.slide-conteudo p {
+  color: #d6deed;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+/* Indicadores no canto inferior direito */
+.carrossel-indicadores {
+  position: absolute;
+  bottom: 38px;
+  right: 36px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.indicador {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.45);
+  transition: all 0.3s ease;
+}
+
+/* Pílula amarela alongada para o slide ativo */
+.indicador.ativo {
+  width: 24px;
+  background-color: #f5c249;
+}
+
+/* --- RESPONSIVIDADE (Tablet e Celular) --- */
+@media (max-width: 820px) {
+  .formatura-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .carrossel-formatura {
+    height: 380px;
+  }
+}
+
+@media (max-width: 540px) {
+  .secao-formatura {
+    padding: 48px 16px;
+  }
+
+  .carrossel-formatura {
+    height: 340px;
+    border-radius: 16px;
+  }
+
+  .carrossel-controles {
+    top: 16px;
+    right: 16px;
+  }
+
+  .btn-seta {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slide-conteudo {
+    bottom: 44px; /* Sobe um pouco para não encostar nos indicadores */
+    left: 20px;
+    right: 20px;
+  }
+
+  .carrossel-indicadores {
+    bottom: 18px;
+    left: 20px;
+    right: auto;
+  }
 }
