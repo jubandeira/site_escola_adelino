@@ -80,6 +80,48 @@ body {
     gap: 8px;
   }
 
+  /* Estilo padrão do botão hambúrguer (escondido no computador) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.menu-toggle .bar {
+  width: 28px;
+  height: 3px;
+  background-color: #1a202c;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Mostra o hambúrguer no celular */
+  }
+
+  /* Esconde a lista de links por padrão no celular */
+  .navbar .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fdfbf7;
+    padding: 20px 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    gap: 16px;
+  }
+
+  .navbar .nav-list.active {
+    display: flex;
+  }
+}
+
   .logo-container {
     display: flex;
     align-items: center; 
@@ -909,7 +951,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 240px;
+    height: auto;       
+    min-height: 260px;  
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
