@@ -1012,6 +1012,193 @@ body {
   }
 }
 
+/* SEÇÃO CURSOS */
+
+.cursos-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #f0f2f5;
+}
+
+.cursos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.cursos-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #4b5563;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.cursos-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.cursos-description {
+    font-size: 15px;
+    color: #4b5563;
+}
+
+.cursos-search {
+    position: relative;
+    width: 320px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border-radius: 50px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    border-color: #9ca3af;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+}
+
+.curso-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 240px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-6px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); 
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.card-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.card-body p {
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.card-footer {
+    border-top: 1px solid #f3f4f6;
+    padding-top: 14px;
+}
+
+.card-link {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-link .seta {
+    transition: transform 0.2s;
+}
+
+.card-link:hover .seta {
+    transform: translateX(4px); 
+}
+
+.cursos-footer-note {
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .cursos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cursos-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cursos-search {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cursos-title {
+        font-size: 28px;
+    }
+}
+
 .secao-conquistas {
   background-color: #192444;
   padding: 64px 20px;
