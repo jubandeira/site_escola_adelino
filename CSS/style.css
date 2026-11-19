@@ -4,22 +4,33 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
   width: 100%;
   overflow-x: hidden;
   background-color: #fdfbf7; 
+  margin-top: 80px; /* Compensa o espaço da barra fixa no topo */
 }
+
+/* --- CABEÇALHO E BARRA DE NAVEGAÇÃO FIXA --- */
 .header-principal {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #fdfbf7;;
+  padding: 15px 40px;
+  background-color: #fdfbf7;
   border-bottom: 1px solid #eaeaea;
   
-  position: relative; 
+  position: fixed; 
   top: 0;          
-  z-index: 1000;
+  left: 0;         
+  width: 100%;     
+  z-index: 1000;   
+}
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  gap: 12px;
 }
 .logo-container {
   display: flex;
@@ -31,18 +42,21 @@ body {
   width: 48px;
   height: 48px;
 }
+
 .logo-texto {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-    justify-content: center; 
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  justify-content: center; 
 }
+
 .logo-texto h1, 
 .logo-texto p {
-    margin: 0;
-    padding: 0;
-    line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
 }
+
 .logo-texto h1 {
   font-size: 18px;
   color: #1a202c;
@@ -73,14 +87,7 @@ body {
   color: #2b6cb0;
 }
 
-@media (max-width: 768px) {
-  .header-principal {
-    flex-direction: column;
-    padding: 10px 16px;
-    gap: 8px;
-  }
-
-  /* Estilo padrão do botão hambúrguer (escondido no computador) */
+/* Botão do Hambúrguer (Escondido no desktop) */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -96,13 +103,18 @@ body {
   transition: 0.3s;
 }
 
-/* Responsividade para celulares */
+/* --- RESPONSIVIDADE PARA CELULARES --- */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex; /* Mostra o hambúrguer no celular */
+  .header-principal {
+    padding: 10px 16px;
   }
 
-  /* Esconde a lista de links por padrão no celular */
+  /* Mostra o botão hambúrguer no celular */
+  .menu-toggle {
+    display: flex; 
+  }
+
+  /* Painel de links que abre ao clicar no hambúrguer */
   .navbar .nav-list {
     display: none;
     flex-direction: column;
@@ -115,31 +127,24 @@ body {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     align-items: center;
     gap: 16px;
+    border-bottom: 2px solid #e5e7eb;
   }
 
+  /* Classe ativada via JavaScript para exibir o menu */
   .navbar .nav-list.active {
     display: flex;
   }
-}
 
   .logo-container {
-    display: flex;
-    align-items: center; 
-    gap: 12px;
-  }
-
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
+    gap: 10px;
   }
 
   .navbar a {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
-
+/* --- HERO SECTION --- */
 .hero-section {
     background-color: #1a2238; 
     color: #ffffff;
@@ -302,14 +307,9 @@ body {
         left: 10px;
         bottom: -15px;
     }
-    .container-diferenciais {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .diferenciais-text h2 {
-        font-size: 2.5rem;
-    }
 }
+
+/* --- DIFERENCIAIS SECTION --- */
 .diferenciais-section {
     background-color: #F4F1EA; 
     color: #2D3748;
@@ -402,11 +402,6 @@ body {
     color: #718096;
     line-height: 1.5;
 }
-@media (max-width: 500px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 @media (max-width: 900px) {
     .container-diferenciais {
@@ -421,10 +416,6 @@ body {
     
     .diferenciais-text h2 {
         font-size: 2.5rem;
-    }
-    .card{
-        flex-direction: row; 
-        align-items: flex-start;
     }
 }
 
@@ -442,30 +433,9 @@ body {
         grid-template-columns: 1fr; 
         gap: 16px;
     }
-    .card{
-        flex-direction: row; 
-        align-items: flex-start;
-    }
 }
 
-
-.header-principal .logo-container {
-    max-height: 100px;
-    opacity: 1;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.2s ease;
-}
-
-.header-principal.rolando .logo-container {
-    max-height: 0;
-    opacity:0;
-}
-
-@media (max-width: 768px) {
-    .header-principal.rolando {
-        padding: 10px 16px;
-    }
-}
+/* --- EJA SECTION --- */
 .eja-section {
     display: flex;
     max-width: 1200px;
@@ -570,6 +540,7 @@ body {
     flex-direction: column;
     gap: 10px;
 }
+
 .eja-doc-list li {
     display: flex;
     align-items: flex-start; 
@@ -583,7 +554,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0; 
-    
     width: 20px;
     height: 20px;
     background-color: #f1f5f9; 
@@ -866,8 +836,7 @@ body {
   }
 }
 
-/* SEÇÃO CURSOS */
-
+/* --- SEÇÃO CURSOS --- */
 .cursos-section {
     max-width: 1200px;
     margin: 60px auto;
@@ -1054,6 +1023,7 @@ body {
     }
 }
 
+/* --- SEÇÃO CONQUISTAS --- */
 .secao-conquistas {
   background-color: #192444;
   padding: 64px 20px;
@@ -1074,6 +1044,7 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
+
 .card-conquistas:hover {
   transform: scale(1.02);
   box-shadow: 0 28px 55px rgba(0, 0, 0, 0.38);
@@ -1240,6 +1211,7 @@ body {
   }
 }
 
+/* --- RODAPÉ --- */
 .rodape {
   background-color: #11192e;
   color: #a3b1cc;
@@ -1255,6 +1227,7 @@ body {
   grid-template-columns: 1.2fr 0.65fr 1.35fr;
   gap: 32px;
 }
+
 .marca-topo {
   display: flex;
   align-items: center;
@@ -1378,6 +1351,7 @@ body {
   color: #6c7a96;
 }
 
+/* --- SEÇÃO FORMATURA --- */
 .secao-formatura {
   background-color: #eef1f6; 
   padding: 72px 24px;
