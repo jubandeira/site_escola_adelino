@@ -684,11 +684,10 @@ body {
   background-color: #0d1324;
 }
 
-.direcao-video video {
+.direcao-video iframe {
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  object-fit: cover;
+  border: none;
   display: block;
 }
 
@@ -702,11 +701,17 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: rgba(13, 19, 36, 0.9); 
+  transition: opacity 0.3s ease;
 }
 
 .btn-play-mock {
   border: none;
   cursor: pointer;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 50%;
+  margin-bottom: 12px;
   transition: transform 0.2s ease;
 }
 
@@ -735,7 +740,7 @@ body {
 
 .video-overlay.escondido {
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none; 
 }
 
 .direcao-conteudo {

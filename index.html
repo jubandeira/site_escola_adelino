@@ -194,19 +194,26 @@
                 <div class="card-direcao">
 
                     <div class="direcao-video">
-                        <video id="videoDirecao" src="./video-diretor.mp4" preload="metadata">
-                            Seu navegador não suporta vídeos.
-                        </video>
 
-                        <div class="video-overlay" id="overlayVideo">
-                            <button type="button" class="btn-play-mock" id="btnPlayVideo"
-                                aria-label="Reproduzir vídeo da direção">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                                </svg>
-                            </button>
-                            <h3>Boas-vindas da direção</h3>
-                            <p>Clique para assistir</p>
+                        <div class="direcao-video">
+                            
+                            <iframe id="youtubePlayer"
+                                src="https://www.youtube.com/embed/mq1QOt0p34k?si=PbdvEbcaddcP6GNf?enablejsapi=1"
+                                title="Boas-vindas da direção" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                            <div class="video-overlay" id="overlayVideo">
+                                <button type="button" class="btn-play-mock" id="btnPlayVideo"
+                                    aria-label="Reproduzir vídeo da direção">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                                    </svg>
+                                </button>
+                                <h3>Boas-vindas da direção</h3>
+                                <p>Clique para assistir</p>
+                            </div>
                         </div>
                     </div>
 

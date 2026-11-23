@@ -83,19 +83,20 @@ indicadores.forEach((indicador, index) => {
 
 // Vídeo do diretor 
 
-const videoDirecao = document.getElementById('videoDirecao');
+const iframePlayer = document.getElementById('youtubePlayer');
 const overlayVideo = document.getElementById('overlayVideo');
 const btnPlayVideo = document.getElementById('btnPlayVideo');
 
-if (videoDirecao && btnPlayVideo) {
+if (iframePlayer && btnPlayVideo && overlayVideo) {
   btnPlayVideo.addEventListener('click', () => {
-    videoDirecao.play();
-    videoDirecao.setAttribute('controls', 'controls');
+    // Esconde o overlay
     overlayVideo.classList.add('escondido');
+
+    // Adiciona o autoplay ao link do iframe apenas agora, fazendo o vídeo tocar
+    let srcAtual = iframePlayer.getAttribute('src');
+    if (!srcAtual.includes('autoplay=1')) {
+      iframePlayer.setAttribute('src', srcAtual + '&autoplay=1');
+    }
   });
 
-  videoDirecao.addEventListener('ended', () => {
-    overlayVideo.classList.remove('escondido');
-    videoDirecao.removeAttribute('controls');
-  });
 }
