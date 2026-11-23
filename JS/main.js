@@ -83,20 +83,13 @@ indicadores.forEach((indicador, index) => {
 
 // Vídeo do diretor 
 
-const iframePlayer = document.getElementById('youtubePlayer');
+const iframePlayer = document.getElementById('drivePlayer');
 const overlayVideo = document.getElementById('overlayVideo');
 const btnPlayVideo = document.getElementById('btnPlayVideo');
 
 if (iframePlayer && btnPlayVideo && overlayVideo) {
   btnPlayVideo.addEventListener('click', () => {
-    // Esconde o overlay
+    // Apenas esconde o overlay para liberar os controles do player do Google Drive
     overlayVideo.classList.add('escondido');
-
-    // Adiciona o autoplay ao link do iframe apenas agora, fazendo o vídeo tocar
-    let srcAtual = iframePlayer.getAttribute('src');
-    if (!srcAtual.includes('autoplay=1')) {
-      iframePlayer.setAttribute('src', srcAtual + '&autoplay=1');
-    }
   });
-
 }
