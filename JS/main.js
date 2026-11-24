@@ -82,14 +82,19 @@ indicadores.forEach((indicador, index) => {
 });
 
 // Vídeo do diretor 
-
-const iframePlayer = document.getElementById('drivePlayer');
+const videoDirecao = document.getElementById('videoDirecao');
 const overlayVideo = document.getElementById('overlayVideo');
 const btnPlayVideo = document.getElementById('btnPlayVideo');
 
-if (iframePlayer && btnPlayVideo && overlayVideo) {
+if (videoDirecao && btnPlayVideo) {
   btnPlayVideo.addEventListener('click', () => {
-    // Apenas esconde o overlay para liberar os controles do player do Google Drive
+    videoDirecao.play();
+    videoDirecao.setAttribute('controls', 'controls');
     overlayVideo.classList.add('escondido');
+  });
+
+  videoDirecao.addEventListener('ended', () => {
+    overlayVideo.classList.remove('escondido');
+    videoDirecao.removeAttribute('controls');
   });
 }
