@@ -1262,32 +1262,36 @@ body {
 }
 
 /* --- RODAPÉ --- */
+/* =========================================
+   RODAPÉ - PADRÃO (CELULAR E TABLET)
+   ========================================= */
 .rodape {
-  background-color: #11192e;
+  background-color: #0d1324;
   color: #a3b1cc;
   font-family: 'Inter', sans-serif;
-  padding-top: 38px;
+  padding-top: 48px;
 }
 
 .rodape-container {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 0 24px 32px 24px;
-  display: grid;
-  grid-template-columns: 1.2fr 0.65fr 1.35fr;
+  padding: 0 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
   gap: 32px;
 }
 
+/* Bloco da Logo e Nome */
 .marca-topo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
 .rodape-logo {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
   background-color: #ffffff;
@@ -1297,17 +1301,18 @@ body {
 .marca-texto strong {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .marca-texto span {
   color: #8f9db8;
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  display: inline-block;
   margin-top: 2px;
 }
 
@@ -1315,78 +1320,10 @@ body {
   font-size: 0.86rem;
   line-height: 1.5;
   color: #9ba8c2;
-  max-width: 300px;
+  max-width: 340px;
 }
 
-/* Container principal do rodapé */
-footer, .rodape-principal {
-  background-color: #0d1324;
-  color: #ffffff;
-  padding-top: 48px;
-}
-
-/* Força o layout em blocos empilhados conforme solicitado */
-.rodape-container {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 24px 40px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* 1. Logo, nome e subtítulo em linha única no topo */
-.rodape-marca-topo {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
-  width: 100%;
-}
-
-.rodape-logo {
-  width: 48px;
-  height: auto;
-  object-fit: contain;
-}
-
-.rodape-titulos h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.1;
-  margin: 0;
-}
-
-.rodape-titulos span {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: #f5c249;
-  text-transform: uppercase;
-  display: block;
-  margin-top: 4px;
-}
-
-/* 2. Parágrafo marca-descrição abaixo deles */
-.marca-descricao {
-  font-size: 0.86rem;
-  line-height: 1.5;
-  color: #9ba8c2;
-  max-width: 400px;
-}
-
-/* 3. Abaixo da descrição, duas colunas (Navegue e Fale com a escola) */
-.rodape-colunas-links {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 48px;
-  width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 32px;
-}
-
+/* Títulos das Colunas (NAVEGUE / FALE COM A ESCOLA) */
 .rodape-coluna h4 {
   color: #f5c249;
   font-size: 0.72rem;
@@ -1454,7 +1391,7 @@ footer, .rodape-principal {
   transform: translateX(4px);
 }
 
-/* 4. Rodapé inferior por último */
+/* Barra Inferior (Copyright) */
 .rodape-inferior {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 20px 0;
@@ -1469,6 +1406,18 @@ footer, .rodape-principal {
   text-align: center;
   font-size: 0.78rem;
   color: #6c7a96;
+}
+
+/* =========================================
+   RODAPÉ - COMPUTADOR (TELAS MAIORES QUE 992px)
+   ========================================= */
+@media (min-width: 992px) {
+  .rodape-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.65fr 1.35fr;
+    gap: 40px;
+    align-items: start;
+  }
 }
 
 /* Responsivo para celulares (empilha as colunas de links
