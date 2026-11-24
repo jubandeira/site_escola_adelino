@@ -919,12 +919,11 @@ body {
 /* --- SEÇÃO CURSOS --- */
 .cursos-section {
   max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background-color: #f0f2f5;
+  background-color: #f5c249;
 }
 
 .cursos-header {
@@ -935,6 +934,7 @@ body {
 }
 
 .cursos-subtitle {
+  margin-top: 20px;
   font-size: 12px;
   font-weight: 700;
   color: #4b5563;
@@ -1044,9 +1044,10 @@ body {
 .cursos-footer-note {
   text-align: center;
   font-size: 12px;
-  color: #9ca3af;
+  color: #111827;
   max-width: 600px;
   margin: 0 auto;
+  font-weight: 600;
 }
 
 @media (max-width: 900px) {
@@ -1317,20 +1318,91 @@ body {
   max-width: 300px;
 }
 
+/* Container principal do rodapé */
+footer, .rodape-principal {
+  background-color: #0d1324;
+  color: #ffffff;
+  padding-top: 48px;
+}
+
+/* Força o layout em blocos empilhados conforme solicitado */
+.rodape-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 1. Logo, nome e subtítulo em linha única no topo */
+.rodape-marca-topo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.rodape-logo {
+  width: 48px;
+  height: auto;
+  object-fit: contain;
+}
+
+.rodape-titulos h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.rodape-titulos span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #f5c249;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 4px;
+}
+
+/* 2. Parágrafo marca-descrição abaixo deles */
+.marca-descricao {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #9ba8c2;
+  max-width: 400px;
+}
+
+/* 3. Abaixo da descrição, duas colunas (Navegue e Fale com a escola) */
+.rodape-colunas-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 32px;
+}
+
 .rodape-coluna h4 {
   color: #f5c249;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .rodape-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 .rodape-links a {
@@ -1351,13 +1423,12 @@ body {
   line-height: 1.5;
   color: #9ba8c2;
   margin-bottom: 14px;
-  max-width: 320px;
 }
 
 .rodape-acoes {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 10px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .rodape-acoes a {
@@ -1383,22 +1454,26 @@ body {
   transform: translateX(4px);
 }
 
+/* 4. Rodapé inferior por último */
 .rodape-inferior {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 16px 0;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 .rodape-inferior-container {
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  text-align: center;
   font-size: 0.78rem;
   color: #6c7a96;
 }
+
+/* Responsivo para celulares (empilha as colunas de links
+
+
 
 /* --- SEÇÃO FORMATURA --- */
 .secao-formatura {
