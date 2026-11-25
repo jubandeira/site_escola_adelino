@@ -505,12 +505,15 @@ body {
   gap: 15px;
 }
 
+.eja-section .subtitle, 
 .eja-subtitle {
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   color: #4A5568;
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px; 
 }
 
 .eja-title {
