@@ -729,53 +729,75 @@ body {
 
 
 .video-overlay {
-
   position: absolute;
-
   inset: 0;
-
   z-index: 2;
-
   padding: 32px;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: center;
-
   text-align: center;
-
 }
 
+.video-overlay h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff; /* Cor de dentro do texto */
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  max-width: 260px;
+  
+  /* Contorno preto ao redor do texto */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000,
+     0px  2px 4px rgba(0, 0, 0, 0.8); /* Uma sombrinha leve de fundo para dar profundidade */
+}
 
+.video-overlay p {
+  color: #d6deed;
+  font-size: 0.84rem;
+  
+  /* Contorno preto ao redor do texto do parágrafo */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000,
+     0px  2px 4px rgba(0, 0, 0, 0.8);
+}
 
 .btn-play-mock {
-
+  width: 48px;  /* Reduzido de 64px para 48px */
+  height: 48px; /* Reduzido de 64px para 48px */
+  border-radius: 50%;
+  background: rgba(245, 194, 73, 0.95);
+  color: #0d1324;
   border: none;
-
   cursor: pointer;
-
-  transition: transform 0.2s ease;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  margin-bottom: 12px;
 }
-
-
 
 .btn-play-mock svg {
-
-  margin-left: 3px;
-
+  width: 18px;  /* Reduzido proporcionalmente para caber bem no botão menor */
+  height: 18px;
+  margin-left: 2px;
+  fill: currentColor;
 }
 
-
-
 .btn-play-mock:hover {
-
-  transform: scale(1.08);
-
+  transform: scale(1.12);
+  background: #f5c249;
+  box-shadow: 0 10px 24px rgba(245, 194, 73, 0.4);
 }
 
 
@@ -917,20 +939,37 @@ body {
 }
 
 /* --- SEÇÃO CURSOS --- */
+/* Container externo que faz o fundo amarelo ocupar 100% da largura da tela */
 .cursos-section {
-  max-width: 1200px;
-  padding: 0 20px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  width: 100%;
   background-color: #f5c249;
+  padding: 40px 20px; /* Adiciona espaçamento em cima/baixo e laterais */
+  box-sizing: border-box;
 }
 
+/* Container interno que centraliza os conteúdos e limita a 1200px */
+.cursos-section > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ajuste específico para o grid e cabeçalho respeitarem o limite de 1200px centralizados */
+.cursos-header,
+.cursos-grid,
+.cursos-footer-note {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Resto dos seus estilos continuam iguais */
 .cursos-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 20px;
+  margin-bottom: 40px; /* Adicionado margem para separar do grid */
 }
 
 .cursos-subtitle {
@@ -961,6 +1000,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin-bottom: 40px; /* Espaço para a nota do rodapé */
 }
 
 .curso-card {
@@ -1059,10 +1099,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .cursos-search {
-    width: 100%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -1074,7 +1110,6 @@ body {
     font-size: 28px;
   }
 }
-
 /* --- SEÇÃO CONQUISTAS --- */
 .secao-conquistas {
   background-color: #192444;
