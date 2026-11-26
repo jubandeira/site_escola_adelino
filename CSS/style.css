@@ -146,22 +146,25 @@ body {
     font-size: 16px;
   }
 }
-
-/* --- HERO SECTION --- */
 .hero-section {
-  background-color: #1a2238;
+  background-color: #131c33;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 80px 90px 80px;
+  min-height: 90vh; /* <--- Adicione esta linha para cobrir a altura total da tela */
+  box-sizing: border-box; /* <--- Garante que os paddings não criem barra de rolagem extra */
+  padding: 60px 80px;
   gap: 40px;
   position: relative;
   overflow: visible;
+  /* font-size: 1.1rem; */
 }
 
 .hero-conteudo {
-  max-width: 600px;
+  max-width: 720px;
 }
 
 .hero-badge {
@@ -178,10 +181,10 @@ body {
 }
 
 .hero-conteudo h1 {
-  font-size: 60px;
+  font-size: 72px; /* Era 60px */
   font-weight: 800;
   line-height: 1.15;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .destaque-amarelo {
@@ -189,7 +192,7 @@ body {
 }
 
 .hero-descricao {
-  font-size: 16px;
+  font-size: 20px;
   color: #cbd5e0;
   line-height: 1.6;
   margin-bottom: 32px;
@@ -242,7 +245,7 @@ body {
 .hero-imagem-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   flex: 1;
 }
 
@@ -250,7 +253,7 @@ body {
   width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: 460px;
+  max-height: 540px;
   border-radius: 24px;
   object-fit: cover;
   display: block;
@@ -328,7 +331,6 @@ body {
   }
 }
 
-/* --- DIFERENCIAIS SECTION --- */
 .diferenciais-section {
   background-color: #F4F1EA;
   color: #2D3748;
@@ -1665,7 +1667,7 @@ body {
 @media (max-width: 540px) {
   .secao-formatura {
     padding: 48px 16px;
-  }
+  }}
 
   .carrossel-formatura {
     height: 340px;
@@ -1693,4 +1695,71 @@ body {
     left: 20px;
     right: auto;
   }
+.menu-acessibilidade {
+  position: fixed;
+  top: 58%; /* Posiciona no meio da tela (50%), e o 60% empurra um pouco mais para baixo para ficar abaixo do VLibras */
+  right: 12px; /* Grudado na direita */
+  transform: translateY(-50%); /* Centraliza perfeitamente o bloco verticalmente */
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse; /* Os botões de A+ e A- abrem para a esquerda */
+  gap: 8px;
+  z-index: 9999;
+}
+/* Reduz o tamanho do botão do bonequinho para 38px (o original era 50px) */
+#toggle-acessibilidade {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#toggle-acessibilidade:hover {
+  background-color: #003d82;
+  transform: scale(1.05);
+}
+
+/* Reduz o tamanho do ícone SVG para caber no botão menor */
+#toggle-acessibilidade svg {
+  width: 20px;
+  height: 20px;
+}
+/* Opções de fonte (ficam escondidas à esquerda do bonequinho) */
+.opcoes-fonte {
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px); /* Animação suave surgindo da direita para a esquerda */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Quando ativo, exibe as opções suavemente */
+.menu-acessibilidade.ativo .opcoes-fonte {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.opcoes-fonte button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.opcoes-fonte button:hover {
+  background-color: #555;
 }
