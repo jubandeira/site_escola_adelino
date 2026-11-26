@@ -88,3 +88,48 @@ if (itensVideosMural.length > 0) {
   btnProxVideoMural.addEventListener('click', () => mostrarVideoMural(indiceVideoMural + 1));
   btnAntVideoMural.addEventListener('click', () => mostrarVideoMural(indiceVideoMural - 1));
 }
+
+// Botão de Acessibilidade e Fontes (Direto nos elementos)
+const toggleBtn = document.getElementById('toggle-acessibilidade');
+const menuContainer = document.getElementById('menu-acessibilidade');
+const increaseBtn = document.getElementById('increase-font');
+const decreaseBtn = document.getElementById('decrease-font');
+
+// Seleciona todos os textos comuns do seu site
+const elementosTexto = document.querySelectorAll('p, h1, h2, h3, h4, a, span, li');
+
+let ajusteTamanho = 0; // Controla quanto foi aumentado/diminuído em pixels
+const maxAjuste = 6;  // Limite máximo para não quebrar o layout (+6px)
+const minAjuste = -2; // Limite mínimo (-2px)
+const step = 2;       // Cada clique muda 2 pixels
+
+if (toggleBtn && menuContainer) {
+  toggleBtn.addEventListener('click', () => {
+    menuContainer.classList.toggle('ativo');
+  });
+}
+
+if (increaseBtn) {
+  increaseBtn.addEventListener('click', () => {
+    if (ajusteTamanho < maxAjuste) {
+      ajusteTamanho += step;
+      elementosTexto.forEach(el => {
+        // Pega o tamanho atual calculado pelo navegador e soma o ajuste
+        let tamanhoAtual = window.getComputedStyle(el).fontSize;
+        el.style.fontSize = (parseFloat(tamanhoAtual) + step) + 'px';
+      });
+    }
+  });
+}
+
+if (decreaseBtn) {
+  decreaseBtn.addEventListener('click', () => {
+    if (ajusteTamanho > minAjuste) {
+      ajusteTamanho -= step;
+      elementosTexto.forEach(el => {
+        let tamanhoAtual = window.getComputedStyle(el).fontSize;
+        el.style.fontSize = (parseFloat(tamanhoAtual) - step) + 'px';
+      });
+    }
+  });
+}
