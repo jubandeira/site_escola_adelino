@@ -938,20 +938,6 @@ body {
   color: #141e36;
   margin-bottom: 12px;
 }
-.video-legenda h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #141e36;
-  font-size: 1.3rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin: 0 0 10px 0;
-}
-.video-legenda p {
-  color: rgba(20, 30, 54, 0.85);
-  font-size: 0.88rem;
-  line-height: 1.6;
-  margin: 0;
-}
 
 .movimento-coluna-direita {
   display: flex;
@@ -1009,17 +995,18 @@ body {
 .video-legenda h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #141e36;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.22;
   margin: auto 0 12px 0; 
 }
 
 .video-legenda p {
-  color: rgba(20, 30, 54, 0.85);
-  font-size: 0.88rem;
+  color: #000000d9;
+  font-size: 0.9rem;
   line-height: 1.65;
   margin: 0;
+  font-weight: 500;
 }
 
 @media (max-width: 1020px) {
