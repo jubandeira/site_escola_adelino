@@ -1765,11 +1765,11 @@ body {
   background-color: #555;
 }
 
-
 @media (max-width: 768px) {
-  /* Altera a posição do botão do VLibras no celular */
-  div[vw] {
-    bottom: 20px !important; /* Mude este valor para ajustar a altura (ex: 10px, 20px, etc.) */
-    top: auto !important;
+  .menu-acessibilidade {
+    top: auto !important;       /* Remove o posicionamento de altura da versão desktop */
+    bottom: 20px !important;    /* Distância da parte inferior da tela no celular */
+    right: 12px;                /* Mantém alinhado na direita */
+    transform: none !important; /* Remove o ajuste de centralização vertical */
   }
 }

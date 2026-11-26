@@ -1180,3 +1180,11 @@ body {
 .opcoes-fonte button:hover {
   background-color: #555;
 }
+
+@media (max-width: 768px) {
+  /* Altera a posição do botão do VLibras no celular */
+  div[vw] {
+    bottom: 20px !important; /* Mude este valor para ajustar a altura (ex: 10px, 20px, etc.) */
+    top: auto !important;
+  }
+}
